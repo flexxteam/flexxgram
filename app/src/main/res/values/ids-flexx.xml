@@ -10,8 +10,20 @@
 	-->
 
 	<!-- Controller ids -->
+	<item type="id" name="controller_flexx" />
+	<item type="id" name="controller_updates" />
 	<item type="id" name="controller_chats" />
 	<item type="id" name="controller_general" />
 	<item type="id" name="controller_interface" />
+
+	<item type="id" name="btn_flexxSettings" />
+	<item type="id" name="btn_flexxUpdates" />
+	<item type="id" name="btn_generalController" />
+	<item type="id" name="btn_interfaceController" />
+	<item type="id" name="btn_chatsController" />
+	<item type="id" name="btn_tgChannel" />
+	<item type="id" name="btn_sources" />
+	<item type="id" name="btn_developer" />
+	<item type="id" name="btn_donate" />
 
 </resources>

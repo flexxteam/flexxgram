@@ -9,9 +9,24 @@
     Copyright (C) 2023 Flexxteam. 
 	-->
 
+	<!-- Basic string -->
+	<string name="Flexx">Flexxgram</string>
+	<string name="FlexxSettings">Customize Flexxgram</string>
+
 	<!-- Controller strings -->
+	<string name="UpdatesController">Updates</string>
+	<string name="FlexxController">Do flexx!</string>
 	<string name="ChatsController">Chats settings</string>
 	<string name="GeneralController">General settings</string>
 	<string name="InterfaceController">Interface settings</string>
+
+	<string name="TgChannel">Telegram channel</string>
+	<string name="TgChannelDesc">Get the latest Flexxgram updates</string>
+	<string name="Developer">Developer</string>
+	<string name="DeveloperDesc">Contact the developer</string>
+	<string name="Sources">Source code</string>
+	<string name="SourcesDesc">Check out the Flexxgram source code</string>
+	<string name="Donate">Donate</string>
+	<string name="DonateDesc">Financial support for development</string>
 
 </resources>
