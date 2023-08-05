@@ -249,6 +249,4 @@ dependencies {
   implementation("com.googlecode.mp4parser:isoparser:1.0.6")
 }
 
-if (!isExperimentalBuild) {
-  apply(plugin = "com.google.gms.google-services")
-}
+apply(plugin = "com.google.gms.google-services")
