@@ -12,7 +12,6 @@
 	<!-- Controller ids -->
 	<item type="id" name="controller_flexx" />
 	<item type="id" name="controller_updates" />
-	<item type="id" name="controller_chats" />
 	<item type="id" name="controller_general" />
 	<item type="id" name="controller_interface" />
 

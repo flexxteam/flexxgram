@@ -12,6 +12,8 @@
 	<!-- Basic string -->
 	<string name="Flexx">Flexxgram</string>
 	<string name="FlexxSettings">Customize Flexxgram</string>
+	<string name="FlexxSettingsDesc">Customize Flexxgram</string>
+	<string name="FlexxLinks">Links</string>
 
 	<!-- Controller strings -->
 	<string name="UpdatesController">Updates</string>

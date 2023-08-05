@@ -581,6 +581,8 @@ public class SettingsController extends ViewController<Void> implements
             text = about;
           }
           view.setText(obtainWrapper(text, ID_BIO));
+        } else if (itemId == R.id.btn_flexxSettings) {
+          view.setData(R.string.FlexxSettingsDesc);
         }
       }
     };
@@ -598,7 +600,7 @@ public class SettingsController extends ViewController<Void> implements
     items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
 
     items.add(new ListItem(ListItem.TYPE_SHADOW_TOP));
-    items.add(new ListItem(ListItem.TYPE_VALUED_SETTING_COMPACT, R.id.btn_flexxSettings, R.drawable.baseline_settings_24, R.string.FlexxController));
+    items.add(new ListItem(ListItem.TYPE_VALUED_SETTING_COMPACT, R.id.btn_flexxSettings, R.drawable.baseline_settings_suggest_24, R.string.FlexxController));
     items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
 
     TdApi.SuggestedAction[] actions = tdlib.getSuggestedActions();

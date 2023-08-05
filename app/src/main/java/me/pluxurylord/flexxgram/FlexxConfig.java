@@ -9,11 +9,11 @@ package me.pluxurylord.flexxgram;
 public class FlexxConfig {
 
 	// Flexxgram basic stuff
-	public static final string FLEXX_VERSION = "1.0.0";
+	public static final String FLEXX_VERSION = "1.0.0";
 
 	// Flexxgram links
-	public static final string LINK_CHANNEL = "https://flexxgram.t.me/";
-	public static final string LINK_SOURCE_CODE = "https://github.com/flexxteam/gram/";
-	public static final string LINK_DEVELOPER = "https://pluxurylordofficial.t.me/";
-	public static final string LINK_DONATE = "https://flexxteamdonate.t.me/";
+	public static final String LINK_CHANNEL = "https://flexxgram.t.me/";
+	public static final String LINK_SOURCE_CODE = "https://github.com/flexxteam/gram/";
+	public static final String LINK_DEVELOPER = "https://pluxurylordofficial.t.me/";
+	public static final String LINK_DONATE = "https://flexxteamdonate.t.me/";
 }

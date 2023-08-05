@@ -12,6 +12,8 @@
 	<!-- Basic string -->
 	<string name="Flexx">Flexxgram</string>
 	<string name="FlexxSettings">Настройте Flexxgram</string>
+	<string name="FlexxSettingsDesc">Кастомизируйте Flexxgram</string>
+	<string name="FlexxLinks">Ссылки</string>
 
 	<!-- Controller strings -->
 	<string name="UpdatesController">Обновления</string>

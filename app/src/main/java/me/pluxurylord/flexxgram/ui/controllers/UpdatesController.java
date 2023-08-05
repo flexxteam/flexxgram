@@ -6,15 +6,12 @@
 
 package me.pluxurylord.flexxgram.ui.controllers;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.util.SparseIntArray;
 import android.view.View;
 
 import org.thunderdog.challegram.R;
 import org.thunderdog.challegram.component.base.SettingView;
 import org.thunderdog.challegram.core.Lang;
-import org.thunderdog.challegram.navigation.ViewController;
 import org.thunderdog.challegram.telegram.Tdlib;
 import org.thunderdog.challegram.telegram.TdlibUi;
 import org.thunderdog.challegram.ui.ListItem;
@@ -26,56 +23,52 @@ import java.util.ArrayList;
 
 import me.pluxurylord.flexxgram.FlexxSettings;
 
-public class UpdatesController extends RecyclerViewController<Void> implements View.OnClickListener, ViewController.SettingsIntDelegate {
+public class UpdatesController extends RecyclerViewController<Void> implements View.OnClickListener {
 
-	private SettingsAdapter adapter;
+  private SettingsAdapter adapter;
 
-	public UpdatesController (Context context, Tdlib tdlib) {
-		super(context, tdlib);
+  public UpdatesController (Context context, Tdlib tdlib) {
+	  super(context, tdlib);
+  }
+
+  @Override
+  public CharSequence getName() {
+    return Lang.getString(R.string.UpdatesController);
+  }
+
+  @Override
+  public void onClick(View v) {
+	  int viewId = v.getId();
+	  /* if (viewId == R.id.something) {
+      Do actions.
+	  } */
+  }
+
+  @Override
+  public int getId() {
+	  return R.id.controller_updates;
+  }
+
+  @Override
+  protected void onCreateView(Context context, CustomRecyclerView recyclerView) {
+	  SettingsAdapter adapter = new SettingsAdapter(this) {
+	    @Override
+	    protected void setValuedSetting(ListItem item, SettingView view, boolean isUpdate) {
+		    view.setDrawModifier(item.getDrawModifier());
+		    int itemId = item.getId();
+		    /* if (itemId == R.id.something) {
+			    Do actions
+		    } */
+	    }
+	  };
+
+	  ArrayList<ListItem> items = new ArrayList<>();
+
+	  // No any items right now.
+
+	  adapter.setItems(items, true);
+    recyclerView.setAdapter(adapter);
+
 	}
 
-	@Override
-	public CharSequence getName() {
-		return Lang.getString(R.string.UpdatesController);
-	}
-
-	@Override
-	public void onClick(View v) {
-		int id = v.getId();
-		switch (id) {
-			// Soon.
-		}
-	}
-
-	@Override
-	public void onApplySettings(int id, SparseIntArray result) {
-		switch (id) {
-			// Soon.
-		}
-	}
-
-	@Override
-	public int getId() {
-		return R.id.controller_updates;
-	}
-
-	@Override
-	protected void onCreateView(Context context, CustomRecyclerView recyclerView) {
-		adapter = new SettingsAdapter(this) {
-			@Override
-			protected void setValuedSetting(ListItem item, SettingView view, boolean isUpdate) {
-				view.setDrawModifier(item.getDrawModifier());
-				switch (item.getId()) {
-					// Soon.
-				}
-			}
-		};
-
-		ArrayList<ListItem> items = new ArrayList<>();
-
-		// No any items right now.
-
-		adapter.setItems(items, true);
-    	recyclerView.setAdapter(adapter);
-	}
 }

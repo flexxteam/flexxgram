@@ -129,20 +129,16 @@ public class FlexxSettings {
     	config.putFloat(key, value);
   	}
 
+  	public void getFloat (String key, float defValue) {
+    	config.getFloat(key, defValue);
+  	}
+
   	public void putBoolean (String key, boolean value) {
     	config.putBoolean(key, value);
   	}
 
   	public boolean getBoolean (String key, boolean defValue) {
     	return config.getBoolean(key, defValue);
-  	}
-
-  	public void putVoid (String key) {
-    	config.putVoid(key);
-  	}
-
-  	public boolean containsKey (String key) {
-    	return config.contains(key);
   	}
 
   	public void putString (String key, @NonNull String value) {
@@ -153,20 +149,12 @@ public class FlexxSettings {
     	return config.getString(key, defValue);
   	}
 
-  	public void removeByPrefix (String prefix, @Nullable SharedPreferences.Editor editor) {
-    	config.removeByPrefix(prefix); // editor
-  	}
-
-  	public void removeByAnyPrefix (String[] prefixes, @Nullable SharedPreferences.Editor editor) {
-    	config.removeByAnyPrefix(prefixes); // , editor
+  	public boolean containsKey (String key) {
+    	return config.contains(key);
   	}
 
   	public LevelDB config () {
     	return config;
-  	}
-
-  	private void upgradeConfig (LevelDB config, SharedPreferences.Editor editor, int version) {
-    	// Do nothing.
   	}
 
   	public interface SettingsChangeListener {
@@ -179,12 +167,6 @@ public class FlexxSettings {
     	if (newSettingsListeners == null) {
       		newSettingsListeners = new ReferenceList<>();
     		newSettingsListeners.add(listener);
-    	}
-  	}
-
-  	public void removeNewSettingsListener (SettingsChangeListener listener) {
-    	if (newSettingsListeners != null) {
-      		newSettingsListeners.remove(listener);
     	}
   	}
 
