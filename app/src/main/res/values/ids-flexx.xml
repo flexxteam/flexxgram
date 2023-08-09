@@ -25,4 +25,7 @@
 	<item type="id" name="btn_developer" />
 	<item type="id" name="btn_donate" />
 
+	<!-- Appearance controller ids -->
+	<item type="id" name="btn_hidePhoneNumber" />
+
 </resources>

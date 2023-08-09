@@ -84,6 +84,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import me.pluxurylord.flexxgram.FlexxSettings;
 import me.pluxurylord.flexxgram.ui.controllers.FlexxController;
 
 import me.vkryl.android.widget.FrameLayoutFix;
@@ -911,7 +912,9 @@ public class SettingsController extends ViewController<Void> implements
     String displayPhoneNumber;
     if (user != null) {
       displayPhoneNumber = originalPhoneNumber = Strings.formatPhone(user.phoneNumber);
-      if (Settings.instance().needHidePhoneNumber()) {
+      if (FlexxSettings.hidePhoneNumber) {
+        displayPhoneNumber = Lang.getString(R.string.PhoneHidden);
+      } else if (Settings.instance().needHidePhoneNumber()) {
         displayPhoneNumber = Strings.replaceNumbers(displayPhoneNumber);
       }
     } else {

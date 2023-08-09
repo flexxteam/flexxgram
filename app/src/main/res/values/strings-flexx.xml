@@ -31,4 +31,10 @@
 	<string name="Donate">Donate</string>
 	<string name="DonateDesc">Financial support for development</string>
 
+	<!-- Appearance controller strings -->
+	<string name="DrawerOptions">Drawer options</string>
+	<string name="PhoneHidden">Phone hidden</string>
+	<string name="HidePhoneNumber">Hide phone number</string>
+	<string name="HidePhoneNumberDesc">Enabling this setting will hide your phone number from the side menu and your profile.</string>
+
 </resources>

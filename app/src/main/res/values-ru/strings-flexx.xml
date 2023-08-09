@@ -31,4 +31,10 @@
 	<string name="Donate">Донаты</string>
 	<string name="DonateDesc">Финансовая поддержка разработки</string>
 
+	<!-- Appearance controller strings -->
+	<string name="DrawerOptions">Боковое меню</string>
+	<string name="PhoneHidden">Номер скрыт</string>
+	<string name="HidePhoneNumber">Скрыть номер телефона</string>
+	<string name="HidePhoneNumberDesc">Включение этой настройки скроет Ваш номер телефона из бокового меню и профиля.</string>
+
 </resources>

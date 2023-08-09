@@ -47,7 +47,7 @@ public class FlexxController extends RecyclerViewController<Void> implements Vie
 	    navigateTo(new InterfaceController(context, tdlib));
 	  } else if (viewId == R.id.btn_chatsController) {
 	    navigateTo(new ChatsController(context, tdlib));
-	  } else if (viewId == R.id.btn_tgchannel) {
+	  } else if (viewId == R.id.btn_tgСhannel) {
 	    tdlib.ui().openUrl(this, FlexxConfig.LINK_CHANNEL, new TdlibUi.UrlOpenParameters().forceInstantView());
 	  } else if (viewId == R.id.btn_sources) {
 	    tdlib.ui().openUrl(this, FlexxConfig.LINK_SOURCE_CODE, new TdlibUi.UrlOpenParameters().forceInstantView());
@@ -72,7 +72,7 @@ public class FlexxController extends RecyclerViewController<Void> implements Vie
 		    int itemId = item.getId();
 		    if (itemId == R.id.btn_flexxUpdates) {
 		      view.setData(FlexxConfig.FLEXX_VERSION);
-		    } else if (itemId == R.id.btn_tgchannel) {
+		    } else if (itemId == R.id.btn_tgСhannel) {
 		      view.setData(R.string.TgChannelDesc);
 		    } else if (itemId == R.id.btn_sources) {
 		      view.setData(R.string.SourcesDesc);
@@ -106,7 +106,7 @@ public class FlexxController extends RecyclerViewController<Void> implements Vie
     items.add(new ListItem(ListItem.TYPE_HEADER, 0, 0, R.string.FlexxLinks));
 
     items.add(new ListItem(ListItem.TYPE_SHADOW_TOP));
-    items.add(new ListItem(ListItem.TYPE_VALUED_SETTING_COMPACT, R.id.btn_tgchannel, R.drawable.baseline_help_24, R.string.TgChannel));
+    items.add(new ListItem(ListItem.TYPE_VALUED_SETTING_COMPACT, R.id.btn_tgСhannel, R.drawable.baseline_help_24, R.string.TgChannel));
     items.add(new ListItem(ListItem.TYPE_SEPARATOR));
     items.add(new ListItem(ListItem.TYPE_VALUED_SETTING_COMPACT, R.id.btn_developer, R.drawable.baseline_code_24, R.string.Developer));
     items.add(new ListItem(ListItem.TYPE_SEPARATOR));

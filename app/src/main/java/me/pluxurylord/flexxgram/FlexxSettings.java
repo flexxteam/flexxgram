@@ -15,7 +15,6 @@ import androidx.annotation.Nullable;
 import org.drinkmore.Tracer;
 import org.thunderdog.challegram.Log;
 import org.thunderdog.challegram.tool.UI;
-import org.thunderdog.challegram.unsorted.Settings;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -26,18 +25,15 @@ import me.vkryl.leveldb.LevelDB;
 
 public class FlexxSettings {
 
-	private static final int VERSION_1 = 1;
-  	private static final int VERSION = VERSION_1;
+  	private static final int VERSION = 1;
   	private static final AtomicBoolean hasInstance = new AtomicBoolean(false);
-  	private static final String KEY_VERSION = "version";
-
-  	// General settings - soon
-  	// Appearance settings - soon
-  	// Chats settings - soon
-  	// Experimental - soon
-
   	private static volatile FlexxSettings instance;
 	private final LevelDB config;
+  	private static final String KEY_VERSION = "version";
+
+  	public static final String HIDE_PHONE_NUMBER = "hide_phone_number";
+
+  	public static boolean hidePhoneNumber = instance().getBoolean(HIDE_PHONE_NUMBER, false);
 
 	private FlexxSettings () {
     	File configDir = new File(UI.getAppContext().getFilesDir(), "flexxcfg");
@@ -176,5 +172,9 @@ public class FlexxSettings {
         		listener.onSettingsChanged(key, newSettings, oldSettings);
       		}
     	}
+  	}
+
+  	public void toggleHidePhoneNumber() {
+  		putBoolean(HIDE_PHONE_NUMBER, hidePhoneNumber ^= true);
   	}
 }
