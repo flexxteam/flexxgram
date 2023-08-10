@@ -33,8 +33,10 @@
 
 	<!-- Appearance controller strings -->
 	<string name="DrawerOptions">Drawer options</string>
+	<string name="DrawerManager">Drawer Manager</string>
+	<string name="DrawerManagerDesc">Here you can select which items will be displayed in the drawer. Note: a restart of the application is required to apply the changes.</string>
 	<string name="PhoneHidden">Phone hidden</string>
 	<string name="HidePhoneNumber">Hide phone number</string>
-	<string name="HidePhoneNumberDesc">Enabling this setting will hide your phone number from the side menu and your profile.</string>
+	<string name="HidePhoneNumberDesc">Enabling this setting will hide your phone number from the side menu and your profile. Note: You may need to restart the application to apply the changes.</string>
 
 </resources>

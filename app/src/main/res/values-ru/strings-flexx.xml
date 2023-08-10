@@ -33,8 +33,10 @@
 
 	<!-- Appearance controller strings -->
 	<string name="DrawerOptions">Боковое меню</string>
+	<string name="DrawerManager">Управление боковым меню</string>
+	<string name="DrawerManagerDesc">Здесь Вы можете выбрать, какие пункты будут отображаться в боковом меню. Примечание: для применения изменений требуется перезапуск приложения.</string>
 	<string name="PhoneHidden">Номер скрыт</string>
 	<string name="HidePhoneNumber">Скрыть номер телефона</string>
-	<string name="HidePhoneNumberDesc">Включение этой настройки скроет Ваш номер телефона из бокового меню и профиля.</string>
+	<string name="HidePhoneNumberDesc">Включение этой настройки скроет Ваш номер телефона из бокового меню и профиля. Примечание: для применения изменений может потребоваться перезапуск приложения.</string>
 
 </resources>

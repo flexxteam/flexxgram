@@ -22,7 +22,7 @@ import org.thunderdog.challegram.v.CustomRecyclerView;
 import java.util.ArrayList;
 
 import me.pluxurylord.flexxgram.FlexxSettings;
-
+import me.pluxurylord.flexxgram.controllers.drawer.DrawerManagerController;
 
 public class InterfaceController extends RecyclerViewController<Void> implements View.OnClickListener {
 
@@ -40,7 +40,9 @@ public class InterfaceController extends RecyclerViewController<Void> implements
   @Override
   public void onClick(View v) {
 	  int viewId = v.getId();
-	  if (viewId == R.id.btn_hidePhoneNumber) {
+	  if (viewId == R.id.btn_drawerManager) {
+	    navigateTo(new DrawerManagerController(context, tdlib));
+	  } else if (viewId == R.id.btn_hidePhoneNumber) {
 	  	FlexxSettings.instance().toggleHidePhoneNumber();
 	  	adapter.updateValuedSettingById(R.id.btn_hidePhoneNumber);
 	  }
@@ -70,10 +72,12 @@ public class InterfaceController extends RecyclerViewController<Void> implements
     items.add(new ListItem(ListItem.TYPE_HEADER, 0, 0, R.string.DrawerOptions));
 
     items.add(new ListItem(ListItem.TYPE_SHADOW_TOP));
+    items.add(new ListItem(ListItem.TYPE_SETTING, R.id.btn_drawerManager, 0, R.string.DrawerManager));
+    items.add(new ListItem(ListItem.TYPE_SEPARATOR_FULL));
     items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_hidePhoneNumber, 0, R.string.HidePhoneNumber));
     items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
-    items.add(new ListItem(ListItem.TYPE_DESCRIPTION, 0, 0, R.string.HidePhoneNumberDesc));
 
+    items.add(new ListItem(ListItem.TYPE_DESCRIPTION, 0, 0, R.string.HidePhoneNumberDesc));
 
 	  adapter.setItems(items, true);
     recyclerView.setAdapter(adapter);

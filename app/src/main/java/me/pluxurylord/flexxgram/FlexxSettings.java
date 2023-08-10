@@ -33,7 +33,19 @@ public class FlexxSettings {
 
   	public static final String HIDE_PHONE_NUMBER = "hide_phone_number";
 
+  	public static final String CONTACTS = "contacts";
+  	public static final String SAVED_MESSAGES = "saved_messages";
+  	public static final String INVITE = "invite";
+  	public static final String HELP = "help";
+  	public static final String NIGHT = "night";
+
   	public static boolean hidePhoneNumber = instance().getBoolean(HIDE_PHONE_NUMBER, false);
+
+  	public static boolean contacts = instance().getBoolean(CONTACTS, true);
+  	public static boolean savedMessages = instance().getBoolean(SAVED_MESSAGES, true);
+  	public static boolean invite = instance().getBoolean(INVITE, false);
+  	public static boolean help = instance().getBoolean(HELP, false);
+  	public static boolean night = instance().getBoolean(NIGHT, false);
 
 	private FlexxSettings () {
     	File configDir = new File(UI.getAppContext().getFilesDir(), "flexxcfg");
@@ -176,5 +188,20 @@ public class FlexxSettings {
 
   	public void toggleHidePhoneNumber() {
   		putBoolean(HIDE_PHONE_NUMBER, hidePhoneNumber ^= true);
+  	}
+
+  	public void toggleDrawerElements(int id) {
+  		switch (id) {
+  			case 1:
+  				putBoolean(CONTACTS, contacts ^= true);
+  			case 2:
+  				putBoolean(SAVED_MESSAGES, savedMessages ^= true);
+  			case 3:
+  				putBoolean(INVITE, invite ^= true);
+  			case 4:
+  				putBoolean(HELP, help ^= true);
+  			case 5:
+  				putBoolean(NIGHT, night ^= true);
+  		}
   	}
 }
