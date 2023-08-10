@@ -51,8 +51,8 @@ public class FlexxController extends RecyclerViewController<Void> implements Vie
 	    tdlib.ui().openUrl(this, FlexxConfig.LINK_CHANNEL, new TdlibUi.UrlOpenParameters().forceInstantView());
 	  } else if (viewId == R.id.btn_sources) {
 	    tdlib.ui().openUrl(this, FlexxConfig.LINK_SOURCE_CODE, new TdlibUi.UrlOpenParameters().forceInstantView());
-	  } else if (viewId == R.id.btn_developer) {
-	    tdlib.ui().openUrl(this, FlexxConfig.LINK_DEVELOPER, new TdlibUi.UrlOpenParameters().forceInstantView());
+	  } else if (viewId == R.id.btn_crowdin) {
+	    tdlib.ui().openUrl(this, FlexxConfig.LINK_CROWDIN, new TdlibUi.UrlOpenParameters().forceInstantView());
 	  } else if (viewId == R.id.btn_donate) {
 	    tdlib.ui().openUrl(this, FlexxConfig.LINK_DONATE, new TdlibUi.UrlOpenParameters().forceInstantView());
 	  }
@@ -76,8 +76,8 @@ public class FlexxController extends RecyclerViewController<Void> implements Vie
 		      view.setData(R.string.TgChannelDesc);
 		    } else if (itemId == R.id.btn_sources) {
 		      view.setData(R.string.SourcesDesc);
-		    } else if (itemId == R.id.btn_developer) {
-		      view.setData(R.string.DeveloperDesc);
+		    } else if (itemId == R.id.btn_crowdin) {
+		      view.setData(R.string.TranslateDesc);
 		    } else if (itemId == R.id.btn_donate) {
 		      view.setData(R.string.DonateDesc);
 		    }
@@ -110,7 +110,7 @@ public class FlexxController extends RecyclerViewController<Void> implements Vie
     items.add(new ListItem(ListItem.TYPE_SHADOW_TOP));
     items.add(new ListItem(ListItem.TYPE_VALUED_SETTING_COMPACT, R.id.btn_tgСhannel, R.drawable.baseline_help_24, R.string.TgChannel));
     items.add(new ListItem(ListItem.TYPE_SEPARATOR));
-    items.add(new ListItem(ListItem.TYPE_VALUED_SETTING_COMPACT, R.id.btn_developer, R.drawable.baseline_code_24, R.string.Developer));
+    items.add(new ListItem(ListItem.TYPE_VALUED_SETTING_COMPACT, R.id.btn_crowdin, R.drawable.baseline_translate_24, R.string.Translate));
     items.add(new ListItem(ListItem.TYPE_SEPARATOR));
     items.add(new ListItem(ListItem.TYPE_VALUED_SETTING_COMPACT, R.id.btn_sources, R.drawable.baseline_github_24, R.string.Sources));
     items.add(new ListItem(ListItem.TYPE_SEPARATOR));

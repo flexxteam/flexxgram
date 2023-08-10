@@ -13,7 +13,7 @@ public class FlexxConfig {
 
 	// Flexxgram links
 	public static final String LINK_CHANNEL = "https://flexxgram.t.me/";
-	public static final String LINK_SOURCE_CODE = "https://github.com/flexxteam/gram/";
-	public static final String LINK_DEVELOPER = "https://pluxurylordofficial.t.me/";
+	public static final String LINK_SOURCE_CODE = "https://github.com/flexxteam/flexxgram/";
+	public static final String LINK_CROWDIN = "https://crowdin.com/project/flexxgram";
 	public static final String LINK_DONATE = "https://flexxteamdonate.t.me/";
 }

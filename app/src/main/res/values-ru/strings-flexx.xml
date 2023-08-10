@@ -25,8 +25,8 @@
 
 	<string name="TgChannel">Telegram канал</string>
 	<string name="TgChannelDesc">Получайте последние обновления Flexxgram</string>
-	<string name="Developer">Разработчик</string>
-	<string name="DeveloperDesc">Свяжитесь с разработчиком</string>
+	<string name="Translate">Crowdin</string>
+	<string name="TranslateDesc">Переведите Flexxgram на Ваш язык</string>
 	<string name="Sources">Исходный код</string>
 	<string name="SourcesDesc">Посмотрите исходный код Flexxgram</string>
 	<string name="Donate">Донаты</string>

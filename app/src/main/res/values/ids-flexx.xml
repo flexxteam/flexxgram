@@ -24,7 +24,7 @@
 	<item type="id" name="btn_chatsController" />
 	<item type="id" name="btn_tgChannel" />
 	<item type="id" name="btn_sources" />
-	<item type="id" name="btn_developer" />
+	<item type="id" name="btn_crowdin" />
 	<item type="id" name="btn_donate" />
 
 	<!-- Appearance controller ids -->
