@@ -292,10 +292,6 @@ public class DrawerController extends ViewController<Void> implements View.OnCli
       items.add(new ListItem(ListItem.TYPE_SEPARATOR_FULL));
       items.add(new ListItem(ListItem.TYPE_DRAWER_ITEM, R.id.btn_reportBug, R.drawable.baseline_bug_report_24, Test.CLICK_NAME, false));
     }
-    if (BuildConfig.EXPERIMENTAL) {
-      items.add(new ListItem(ListItem.TYPE_SEPARATOR_FULL));
-      items.add(new ListItem(ListItem.TYPE_DRAWER_ITEM, R.id.btn_featureToggles, R.drawable.outline_toggle_on_24, "Feature Toggles", false));
-    }
     if (Settings.instance().inDeveloperMode()) {
       items.add(new ListItem(ListItem.TYPE_SEPARATOR_FULL));
       items.add(new ListItem(ListItem.TYPE_DRAWER_ITEM, R.id.btn_tdlib_clearLogs, R.drawable.baseline_bug_report_24, "Clear TDLib logs", false));
@@ -888,8 +884,6 @@ public class DrawerController extends ViewController<Void> implements View.OnCli
       ThemeManager.instance().toggleNightMode();
     } else if (viewId == R.id.btn_bubble) {
       context().currentTdlib().settings().toggleChatStyle();
-    } else if (viewId == R.id.btn_featureToggles) {
-      UI.navigateTo(new FeatureToggles.Controller(context, context.currentTdlib()));
     }
   }
 

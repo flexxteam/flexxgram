@@ -48,6 +48,7 @@
 	<string name="DisableSenderButton">Отключить кнопку отправки от имени канала</string>
 
 	<!-- Experimental controller strings -->
+	<string name="FeatureTogglesDesc">Экспериментальные настройки Telegram</string>
 	<string name="PhotoSizeLimit2560">Отправка фотографий большого размера</string>
 	<string name="PhotoSizeLimit2560Desc">Увеличить размер сторон на сжатых изображениях до 2560px</string>
 

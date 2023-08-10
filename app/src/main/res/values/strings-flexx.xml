@@ -48,6 +48,8 @@
 	<string name="DisableSenderButton">Disable send-as button</string>
 
 	<!-- Experimental controller strings -->
+	<string name="FeatureToggles">Feature toggles</string>
+	<string name="FeatureTogglesDesc">Experimental Telegram settings</string>
 	<string name="PhotoSizeLimit2560">Sending large-size photos</string>
 	<string name="PhotoSizeLimit2560Desc">Increase the aspect size on compressed images to 2560px</string>
 
