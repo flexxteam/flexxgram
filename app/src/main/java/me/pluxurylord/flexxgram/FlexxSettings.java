@@ -44,6 +44,8 @@ public class FlexxSettings {
   	public static final String HELP = "help";
   	public static final String NIGHT = "night";
 
+  	public static final String PHOTO_SIZE_LIMIT_2560 = "photo_change_size_limit";
+
   	public static boolean hidePhoneNumber = instance().getBoolean(HIDE_PHONE_NUMBER, false);
 
   	public static boolean disableCameraButton = instance().getBoolean(DISABLE_CAMERA_BUTTON, false);
@@ -56,6 +58,8 @@ public class FlexxSettings {
   	public static boolean invite = instance().getBoolean(INVITE, false);
   	public static boolean help = instance().getBoolean(HELP, false);
   	public static boolean night = instance().getBoolean(NIGHT, false);
+
+  	public static boolean photoSizeLimit2560 = instance().getBoolean(PHOTO_SIZE_LIMIT_2560, false);
 
 	private FlexxSettings () {
     	File configDir = new File(UI.getAppContext().getFilesDir(), "flexxcfg");
@@ -230,4 +234,9 @@ public class FlexxSettings {
   	public void toggleDisableSenderButton() {
   		putBoolean(DISABLE_SENDER_BUTON, disableSenderButton ^= true);
   	}
+
+  	public void togglePhotoSizeLimit2560() {
+  		putBoolean(PHOTO_SIZE_LIMIT_2560, photoSizeLimit2560 ^= true);
+  	}
+
 }

@@ -14,6 +14,7 @@
 	<item type="id" name="controller_updates" />
 	<item type="id" name="controller_general" />
 	<item type="id" name="controller_interface" />
+	<item type="id" name="controller_experimental" />
 	<item type="id" name="controller_drawerManager" />
 
 	<item type="id" name="btn_flexxSettings" />
@@ -35,5 +36,8 @@
 	<item type="id" name="btn_disableRecordButton" />
 	<item type="id" name="btn_disableCmdButton" />
 	<item type="id" name="btn_disableSenderButton" />
+
+	<!-- Experimental controller ids -->
+	<item type="id" name="btn_photoSizeLimit2560" />
 
 </resources>

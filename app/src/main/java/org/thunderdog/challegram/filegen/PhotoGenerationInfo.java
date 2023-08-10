@@ -33,11 +33,14 @@ import org.thunderdog.challegram.mediaview.paint.PaintState;
 
 import java.io.InputStream;
 
+import me.pluxurylord.flexxgram.FlexxSettings;
+
 import me.vkryl.core.MathUtils;
 import me.vkryl.core.StringUtils;
 
 public class PhotoGenerationInfo extends GenerationInfo {
-  public static final int SIZE_LIMIT = 1280;
+
+  public static int SIZE_LIMIT = setPhotoSizeLimit();
 
   private int rotation; // 0, 90, 180 or 270
   private boolean isFiltered;
@@ -412,5 +415,13 @@ public class PhotoGenerationInfo extends GenerationInfo {
     }
 
     return b.toString();
+  }
+
+  public static int setPhotoSizeLimit() {
+    if (FlexxSettings.photoSizeLimit2560) {
+      return  2560;
+    } else {
+      return 1280;
+    }
   }
 }

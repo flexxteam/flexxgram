@@ -101,6 +101,8 @@ public class FlexxController extends RecyclerViewController<Void> implements Vie
     items.add(new ListItem(ListItem.TYPE_SETTING, R.id.btn_interfaceController, R.drawable.baseline_palette_24, R.string.InterfaceController));
     items.add(new ListItem(ListItem.TYPE_SEPARATOR));
     items.add(new ListItem(ListItem.TYPE_SETTING, R.id.btn_chatsController, R.drawable.baseline_chat_bubble_24, R.string.ChatsController));
+    items.add(new ListItem(ListItem.TYPE_SEPARATOR));
+    items.add(new ListItem(ListItem.TYPE_SETTING, R.id.btn_experimentalController, R.drawable.baseline_science_24, R.string.ExperimentalController));
     items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
 
     items.add(new ListItem(ListItem.TYPE_HEADER, 0, 0, R.string.FlexxLinks));

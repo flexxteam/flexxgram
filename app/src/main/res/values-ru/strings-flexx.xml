@@ -21,6 +21,7 @@
 	<string name="ChatsController">Чаты</string>
 	<string name="GeneralController">Основные</string>
 	<string name="InterfaceController">Внешний вид</string>
+	<string name="ExperimentalController">Другое</string>
 
 	<string name="TgChannel">Telegram канал</string>
 	<string name="TgChannelDesc">Получайте последние обновления Flexxgram</string>
@@ -45,5 +46,9 @@
 	<string name="DisableRecordButton">Отключить кнопку записи</string>
 	<string name="DisableCmdButton">Отключить кнопку команд (для ботов)</string>
 	<string name="DisableSenderButton">Отключить кнопку отправки от имени канала</string>
+
+	<!-- Experimental controller strings -->
+	<string name="PhotoSizeLimit2560">Отправка фотографий большого размера</string>
+	<string name="PhotoSizeLimit2560Desc">Увеличить размер сторон на сжатых изображениях до 2560px</string>
 
 </resources>
