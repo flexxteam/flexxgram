@@ -33,6 +33,11 @@ public class FlexxSettings {
 
   	public static final String HIDE_PHONE_NUMBER = "hide_phone_number";
 
+  	public static final String DISABLE_CAMERA_BUTTON = "disable_camera_button";
+  	public static final String DISABLE_RECORD_BUTTON = "disable_record_button";
+  	public static final String DISABLE_CMD_BUTTON = "disable_cmd_button";
+  	public static final String DISABLE_SENDER_BUTTON = "disable_sender_button";
+
   	public static final String CONTACTS = "contacts";
   	public static final String SAVED_MESSAGES = "saved_messages";
   	public static final String INVITE = "invite";
@@ -40,6 +45,11 @@ public class FlexxSettings {
   	public static final String NIGHT = "night";
 
   	public static boolean hidePhoneNumber = instance().getBoolean(HIDE_PHONE_NUMBER, false);
+
+  	public static boolean disableCameraButton = instance().getBoolean(DISABLE_CAMERA_BUTTON, false);
+  	public static boolean disableRecordButton = instance().getBoolean(DISABLE_RECORD_BUTTON, false);
+  	public static boolean disableCmdButton = instance().getBoolean(DISABLE_CMD_BUTTON, false);
+  	public static boolean disableSenderButton = instance().getBoolean(DISABLE_SENDER_BUTON, false);
 
   	public static boolean contacts = instance().getBoolean(CONTACTS, true);
   	public static boolean savedMessages = instance().getBoolean(SAVED_MESSAGES, true);
@@ -203,5 +213,21 @@ public class FlexxSettings {
   			case 5:
   				putBoolean(NIGHT, night ^= true);
   		}
+  	}
+
+  	public void toggleDisableCameraButton() {
+  		putBoolean(DISABLE_CAMERA_BUTTON, disableCameraButton ^= true);
+  	}
+
+  	public void toggleDisableRecordButton() {
+  		putBoolean(DISABLE_RECORD_BUTTON, disableRecordButton ^= true);
+  	}
+
+  	public void toggleDisableCmdButton() {
+  		putBoolean(DISABLE_CMD_BUTTON, disableCmdButton ^= true);
+  	}
+
+  	public void toggleDisableSenderButton() {
+  		putBoolean(DISABLE_SENDER_BUTON, disableSenderButton ^= true);
   	}
 }

@@ -39,4 +39,11 @@
 	<string name="HidePhoneNumber">Hide phone number</string>
 	<string name="HidePhoneNumberDesc">Enabling this setting will hide your phone number from the side menu and your profile. Note: You may need to restart the application to apply the changes.</string>
 
+	<!-- Chats controller strings -->
+	<string name="ChatSettings">Chat</string>
+	<string name="DisableCameraButton">Disable camera button</string>
+	<string name="DisableRecordButton">Disable record button</string>
+	<string name="DisableCmdButton">Disable commands button</string>
+	<string name="DisableSenderButton">Disable send-as button</string>
+
 </resources>

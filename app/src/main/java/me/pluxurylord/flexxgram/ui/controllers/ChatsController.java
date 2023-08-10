@@ -40,9 +40,19 @@ public class ChatsController extends RecyclerViewController<Void> implements Vie
   @Override
   public void onClick(View v) {
 	  int viewId = v.getId();
-	  /* if (viewId == R.id.something) {
-      Do actions.
-	  } */
+	  if (viewId == R.id.btn_disableCameraButton) {
+	  	FlexxSettings.instance().toggleDisableCameraButton();
+	  	adapter.updateValuedSettingById(R.id.btn_disableCameraButton);
+	  } else if (viewId == R.id.btn_disableRecordButton) {
+	  	FlexxSettings.instance().toggleDisableRecordButton();
+	  	adapter.updateValuedSettingById(R.id.btn_disableRecordButton);
+	  } else if (viewId == R.id.btn_disableCmdButton) {
+	  	FlexxSettings.instance().toggleDisableCmdButton();
+	  	adapter.updateValuedSettingById(R.id.btn_disableCmdButton);
+	  } else if (viewId == R.id.btn_disableSenderButton) {
+	  	FlexxSettings.instance().toggleDisableSenderButton();
+	  	adapter.updateValuedSettingById(R.id.btn_disableSenderButton);
+	  }
   }
 
   @Override
@@ -57,15 +67,32 @@ public class ChatsController extends RecyclerViewController<Void> implements Vie
 	    protected void setValuedSetting(ListItem item, SettingView view, boolean isUpdate) {
 		    view.setDrawModifier(item.getDrawModifier());
 		    int itemId = item.getId();
-		    /* if (itemId == R.id.something) {
-			    Do actions.
-		    } */
+		    if (itemId == R.id.btn_disableCameraButton) {
+			    view.getToggler().setRadioEnabled(FlexxSettings.disableCameraButton, isUpdate);
+		    } else if (itemId == R.id.btn_disableRecordButton) {
+		    	view.getToggler().setRadioEnabled(FlexxSettings.disableRecordButton, isUpdate);
+		    } else if (itemId == R.id.btn_disableCmdButton) {
+		    	view.getToggler().setRadioEnabled(FlexxSettings.disableCmdButton, isUpdate);
+		    } else if (itemId == R.id.btn_disableSenderButton) {
+		    	view.getToggler().setRadioEnabled(FlexxSettings.disableSenderButton, isUpdate);
+		    }
 	    }
 	  };
 
 	  ArrayList<ListItem> items = new ArrayList<>();
 
-	  // No any items right now.
+	  items.add(new ListItem(ListItem.TYPE_EMPTY_OFFSET_SMALL));
+    items.add(new ListItem(ListItem.TYPE_HEADER, 0, 0, R.string.ChatSettings));
+
+    items.add(new ListItem(ListItem.TYPE_SHADOW_TOP));
+    items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_disableCameraButton, 0, R.string.DisableCameraButton));
+    items.add(new ListItem(ListItem.TYPE_SEPARATOR_FULL));
+    items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_disableRecordButton, 0, R.string.DisableRecordButton));
+    items.add(new ListItem(ListItem.TYPE_SEPARATOR_FULL));
+    items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_disableCmdButton, 0, R.string.DisableCmdButton));
+    items.add(new ListItem(ListItem.TYPE_SEPARATOR_FULL));
+    items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_disableSenderButton, 0, R.string.DisableSenderButton));
+    items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
 
 	  adapter.setItems(items, true);
     recyclerView.setAdapter(adapter);

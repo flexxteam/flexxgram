@@ -30,4 +30,10 @@
 	<item type="id" name="btn_drawerManager" />
 	<item type="id" name="btn_hidePhoneNumber" />
 
+	<!-- Chats controller ids -->
+	<item type="id" name="btn_disableCameraButton" />
+	<item type="id" name="btn_disableRecordButton" />
+	<item type="id" name="btn_disableCmdButton" />
+	<item type="id" name="btn_disableSenderButton" />
+
 </resources>

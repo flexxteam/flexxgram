@@ -39,4 +39,11 @@
 	<string name="HidePhoneNumber">Скрыть номер телефона</string>
 	<string name="HidePhoneNumberDesc">Включение этой настройки скроет Ваш номер телефона из бокового меню и профиля. Примечание: для применения изменений может потребоваться перезапуск приложения.</string>
 
+	<!-- Chats controller strings -->
+	<string name="ChatSettings">Чат</string>
+	<string name="DisableCameraButton">Отключить кнопку камеры</string>
+	<string name="DisableRecordButton">Отключить кнопку записи</string>
+	<string name="DisableCmdButton">Отключить кнопку команд (для ботов)</string>
+	<string name="DisableSenderButton">Отключить кнопку отправки от имени канала</string>
+
 </resources>
