@@ -23,51 +23,51 @@ import java.util.ArrayList;
 
 import me.pluxurylord.flexxgram.FlexxSettings;
 
-
 public class GeneralController extends RecyclerViewController<Void> implements View.OnClickListener {
 
   private SettingsAdapter adapter;
 
   public GeneralController (Context context, Tdlib tdlib) {
-	  super(context, tdlib);
+	super(context, tdlib);
   }
 
   @Override
   public CharSequence getName() {
-	  return Lang.getString(R.string.GeneralController);
-  }
-
-  @Override
-  public void onClick(View v) {
-	  int viewId = v.getId();
-	  /* if (viewId == R.id.something) {
-      Do actions.
-	  } */
+	return Lang.getString(R.string.GeneralController);
   }
 
   @Override
   public int getId() {
-	  return R.id.controller_general;
+	return R.id.controller_general;
+  }
+
+  @Override
+  public void onClick(View v) {
+	int viewId = v.getId();
+	/* if (viewId == R.id.something) {
+      Do actions.
+	} */
+	break;
   }
 
   @Override
   protected void onCreateView(Context context, CustomRecyclerView recyclerView) {
-	  SettingsAdapter adapter = new SettingsAdapter(this) {
-	    @Override
-	    protected void setValuedSetting(ListItem item, SettingView view, boolean isUpdate) {
-		    view.setDrawModifier(item.getDrawModifier());
-		    int itemId = item.getId();
-		    /* if (itemId == R.id.something) {
-			    Do actions
-		    } */
-	    }
-	  };
+	SettingsAdapter adapter = new SettingsAdapter(this) {
+	  @Override
+	  protected void setValuedSetting(ListItem item, SettingView view, boolean isUpdate) {
+		view.setDrawModifier(item.getDrawModifier());
+		int itemId = item.getId();
+		/* if (itemId == R.id.something) {
+		  Do actions
+		} */
+	  }
+	};
 
-	  ArrayList<ListItem> items = new ArrayList<>();
+	ArrayList<ListItem> items = new ArrayList<>();
 
-	  // No any items right now.
+	// No any items right now.
 
-	  adapter.setItems(items, true);
+	adapter.setItems(items, true);
     recyclerView.setAdapter(adapter);
 
   }

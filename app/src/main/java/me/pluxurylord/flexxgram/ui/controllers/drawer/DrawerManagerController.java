@@ -28,7 +28,7 @@ public class DrawerManagerController extends RecyclerViewController<Void> implem
   private SettingsAdapter adapter;
 
   public DrawerManagerController (Context context, Tdlib tdlib) {
-	  super(context, tdlib);
+	super(context, tdlib);
   }
 
   @Override
@@ -37,67 +37,68 @@ public class DrawerManagerController extends RecyclerViewController<Void> implem
   }
 
   @Override
-  public void onClick(View v) {
-	  int viewId = v.getId();
-	  if (viewId == R.id.btn_contacts) {
-      FlexxSettings.toggleDrawerElements(1);
-      adapter.updateValuedSettingById(R.id.btn_contacts);
-	  } else if (viewId == R.id.btn_savedMessages) {
-	  	FlexxSettings.toggleDrawerElements(2);
-      adapter.updateValuedSettingById(R.id.btn_savedMessages);
-	  } else if (viewId == R.id.btn_invite) {
-	  	FlexxSettings.toggleDrawerElements(3);
-      adapter.updateValuedSettingById(R.id.btn_invite);
-	  } else if (viewId == R.id.btn_help) {
-	  	FlexxSettings.toggleDrawerElements(4);
-      adapter.updateValuedSettingById(R.id.btn_help);
-	  } else if (viewId == R.id.btn_night) {
-	  	FlexxSettings.toggleDrawerElements(5);
-      adapter.updateValuedSettingById(R.id.btn_night);
-	  }
+  public int getId() {
+	return R.id.controller_drawerManager;
   }
 
   @Override
-  public int getId() {
-	  return R.id.controller_drawerManager;
+  public void onClick(View v) {
+	int viewId = v.getId();
+	if (viewId == R.id.btn_contacts) {
+      FlexxSettings.instance().toggleDrawerElements(1);
+      adapter.updateValuedSettingById(R.id.btn_contacts);
+	} else if (viewId == R.id.btn_savedMessages) {
+	  FlexxSettings.instance().toggleDrawerElements(2);
+      adapter.updateValuedSettingById(R.id.btn_savedMessages);
+	} else if (viewId == R.id.btn_invite) {
+	  FlexxSettings.instance().toggleDrawerElements(3);
+      adapter.updateValuedSettingById(R.id.btn_invite);
+	} else if (viewId == R.id.btn_help) {
+	  FlexxSettings.instance().toggleDrawerElements(4);
+      adapter.updateValuedSettingById(R.id.btn_help);
+	} else if (viewId == R.id.btn_night) {
+	  FlexxSettings.instance().toggleDrawerElements(5);
+      adapter.updateValuedSettingById(R.id.btn_night);
+	}
+	break;
   }
 
   @Override
   protected void onCreateView(Context context, CustomRecyclerView recyclerView) {
-	  SettingsAdapter adapter = new SettingsAdapter(this) {
-	    @Override
-	    protected void setValuedSetting(ListItem item, SettingView view, boolean isUpdate) {
-		    view.setDrawModifier(item.getDrawModifier());
-		    int itemId = item.getId();
-		    if (itemId == R.id.btn_contacts) {
-			    view.getToggler().setRadioEnabled(FlexxSettings.contacts, isUpdate);
-		    } else if (itemId == R.id.btn_savedMessages) {
-		    	view.getToggler().setRadioEnabled(FlexxSettings.savedMessages, isUpdate);
-		    } else if (itemId == R.id.btn_invite) {
-		    	view.getToggler().setRadioEnabled(FlexxSettings.invite, isUpdate);
-		    } else if (itemId == R.id.btn_help) {
-		    	view.getToggler().setRadioEnabled(FlexxSettings.help, isUpdate);
-		    } else if (itemId == R.id.btn_night) {
-		    	view.getToggler().setRadioEnabled(FlexxSettings.night, isUpdate);
-		    }
-	    }
-	  };
+	SettingsAdapter adapter = new SettingsAdapter(this) {
+	  @Override
+	  protected void setValuedSetting(ListItem item, SettingView view, boolean isUpdate) {
+		view.setDrawModifier(item.getDrawModifier());
+		int itemId = item.getId();
+		if (itemId == R.id.btn_contacts) {
+		  view.getToggler().setRadioEnabled(FlexxSettings.contacts, isUpdate);
+		} else if (itemId == R.id.btn_savedMessages) {
+		  view.getToggler().setRadioEnabled(FlexxSettings.savedMessages, isUpdate);
+		} else if (itemId == R.id.btn_invite) {
+		  view.getToggler().setRadioEnabled(FlexxSettings.invite, isUpdate);
+		} else if (itemId == R.id.btn_help) {
+		  view.getToggler().setRadioEnabled(FlexxSettings.help, isUpdate);
+		} else if (itemId == R.id.btn_night) {
+		  view.getToggler().setRadioEnabled(FlexxSettings.night, isUpdate);
+		}
+	  }
+	};
 
-	  ArrayList<ListItem> items = new ArrayList<>();
+	ArrayList<ListItem> items = new ArrayList<>();
 
-	  items.add(new ListItem(ListItem.TYPE_SHADOW_TOP));
-	  items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_contacts, 0, R.string.Contacts));
-	  items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_savedMessages, 0, R.string.SavedMessages));
-	  items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_invite, 0, R.string.InviteFriends));
-	  items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_help, 0, R.string.Help));
-	  items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_night, 0, R.string.NightMode));
-	  items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
+	items.add(new ListItem(ListItem.TYPE_SHADOW_TOP));
+    items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_contacts, 0, R.string.Contacts));
+	items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_savedMessages, 0, R.string.SavedMessages));
+	items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_invite, 0, R.string.InviteFriends));
+	items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_help, 0, R.string.Help));
+	items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_night, 0, R.string.NightMode));
+	items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
 
-	  items.add(new ListItem(ListItem.TYPE_DESCRIPTION, 0, 0, R.string.DrawerManagerDesc));
+	items.add(new ListItem(ListItem.TYPE_DESCRIPTION, 0, 0, R.string.DrawerManagerDesc));
 
-	  adapter.setItems(items, true);
+	adapter.setItems(items, true);
     recyclerView.setAdapter(adapter);
 
-	}
+  }
 
 }

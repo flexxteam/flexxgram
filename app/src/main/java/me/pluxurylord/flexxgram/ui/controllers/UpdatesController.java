@@ -28,7 +28,7 @@ public class UpdatesController extends RecyclerViewController<Void> implements V
   private SettingsAdapter adapter;
 
   public UpdatesController (Context context, Tdlib tdlib) {
-	  super(context, tdlib);
+	super(context, tdlib);
   }
 
   @Override
@@ -38,37 +38,38 @@ public class UpdatesController extends RecyclerViewController<Void> implements V
 
   @Override
   public void onClick(View v) {
-	  int viewId = v.getId();
-	  /* if (viewId == R.id.something) {
+	int viewId = v.getId();
+	/* if (viewId == R.id.something) {
       Do actions.
-	  } */
+	} */
+	break;
   }
 
   @Override
   public int getId() {
-	  return R.id.controller_updates;
+	return R.id.controller_updates;
   }
 
   @Override
   protected void onCreateView(Context context, CustomRecyclerView recyclerView) {
-	  SettingsAdapter adapter = new SettingsAdapter(this) {
-	    @Override
-	    protected void setValuedSetting(ListItem item, SettingView view, boolean isUpdate) {
-		    view.setDrawModifier(item.getDrawModifier());
-		    int itemId = item.getId();
-		    /* if (itemId == R.id.something) {
-			    Do actions
-		    } */
-	    }
-	  };
+	SettingsAdapter adapter = new SettingsAdapter(this) {
+	  @Override
+	  protected void setValuedSetting(ListItem item, SettingView view, boolean isUpdate) {
+		view.setDrawModifier(item.getDrawModifier());
+		int itemId = item.getId();
+		/* if (itemId == R.id.something) {
+		  Do actions
+		} */
+	  }
+	};
 
-	  ArrayList<ListItem> items = new ArrayList<>();
+	ArrayList<ListItem> items = new ArrayList<>();
 
-	  // No any items right now.
+	// No any items right now.
 
-	  adapter.setItems(items, true);
+	adapter.setItems(items, true);
     recyclerView.setAdapter(adapter);
 
-	}
+  }
 
 }

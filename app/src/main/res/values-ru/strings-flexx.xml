@@ -24,13 +24,13 @@
 	<string name="ExperimentalController">Другое</string>
 
 	<string name="TgChannel">Telegram канал</string>
-	<string name="TgChannelDesc">Получайте последние обновления Flexxgram</string>
+	<string name="TgChannelDesc">Получайте последние обновления Flexxgram.</string>
 	<string name="Translate">Crowdin</string>
-	<string name="TranslateDesc">Переведите Flexxgram на Ваш язык</string>
+	<string name="TranslateDesc">Переведите Flexxgram на Ваш язык.</string>
 	<string name="Sources">Исходный код</string>
-	<string name="SourcesDesc">Посмотрите исходный код Flexxgram</string>
+	<string name="SourcesDesc">Посмотрите исходный код Flexxgram.</string>
 	<string name="Donate">Донаты</string>
-	<string name="DonateDesc">Финансовая поддержка разработки</string>
+	<string name="DonateDesc">Финансовая поддержка разработки.</string>
 
 	<!-- Appearance controller strings -->
 	<string name="DrawerOptions">Боковое меню</string>
@@ -50,6 +50,6 @@
 	<!-- Experimental controller strings -->
 	<string name="FeatureTogglesDesc">Экспериментальные настройки Telegram</string>
 	<string name="PhotoSizeLimit2560">Отправка фотографий большого размера</string>
-	<string name="PhotoSizeLimit2560Desc">Увеличить размер сторон на сжатых изображениях до 2560px</string>
+	<string name="PhotoSizeLimit2560Desc">Увеличить размер сторон до 2560px</string>
 
 </resources>

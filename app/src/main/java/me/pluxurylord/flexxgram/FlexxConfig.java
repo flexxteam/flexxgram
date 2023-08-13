@@ -8,12 +8,13 @@ package me.pluxurylord.flexxgram;
 
 public class FlexxConfig {
 
-	// Flexxgram basic stuff
-	public static final String FLEXX_VERSION = "1.0.0";
+  // Flexxgram basic stuff
+  public static final String FLEXX_VERSION = "1.0.0";
 
-	// Flexxgram links
-	public static final String LINK_CHANNEL = "https://flexxgram.t.me/";
-	public static final String LINK_SOURCE_CODE = "https://github.com/flexxteam/flexxgram/";
-	public static final String LINK_CROWDIN = "https://crowdin.com/project/flexxgram";
-	public static final String LINK_DONATE = "https://flexxteamdonate.t.me/";
+  // Flexxgram links
+  public static final String LINK_CHANNEL = "https://flexxgram.t.me/";
+  public static final String LINK_SOURCE_CODE = "https://github.com/flexxteam/flexxgram/";
+  public static final String LINK_CROWDIN = "https://crowdin.com/project/flexxgram";
+  public static final String LINK_DONATE = "https://flexxteamdonate.t.me/";
+
 }

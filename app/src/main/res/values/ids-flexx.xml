@@ -22,7 +22,8 @@
 	<item type="id" name="btn_generalController" />
 	<item type="id" name="btn_interfaceController" />
 	<item type="id" name="btn_chatsController" />
-	<item type="id" name="btn_tgChannel" />
+	<item type="id" name="btn_experimentalController" />
+	<item type="id" name="btn_tgch" />
 	<item type="id" name="btn_sources" />
 	<item type="id" name="btn_crowdin" />
 	<item type="id" name="btn_donate" />
